@@ -1,0 +1,10 @@
+age = 18
+age = age+1
+print(age)
+Name="Zayeem"
+Name=Name+" CH"
+print(Name)
+
+CGPA=3.28
+New_CGPA=CGPA+0.1
+print(New_CGPA)
