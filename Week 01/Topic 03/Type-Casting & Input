@@ -1,0 +1,11 @@
+age=input("Enter your present age...")
+print(age)
+print(type(age))
+
+intage=int(age)+1
+print(intage)
+print(type(intage))
+
+floatage=float(age)+0.1
+print(floatage)
+print(type(floatage))
