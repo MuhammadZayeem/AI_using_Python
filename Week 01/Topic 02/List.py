@@ -12,5 +12,8 @@ print(Fruits)
 Fruits.pop()             #Remove from last
 print(Fruits)
 Fruits.sort()
-print(Fruits)
+print(Fruits)            #Sorts in order
 
+#Loop List
+for fruit in Fruits:
+   print(fruit)
