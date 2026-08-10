@@ -1,0 +1,37 @@
+sum=0
+odd_numbers=0
+even_numbers=0
+for i in range(5):
+    number=int(input("Enter any number..."))
+    sum+=number
+    if i == 0:
+        largest_number = number
+        smallest_number = number
+    if number>largest_number:
+        largest_number=number
+    if smallest_number>number:
+        smallest_number=number
+    if number>0:
+        print("Given number:",number," is positive!")
+    elif number<0:
+        print("Given number:",number," is negative!")
+    else:
+        print("Given number:",number," is zero!")
+
+    if number==0 or number%2==0:
+        print("Given number:",number," is Even!")
+        even_numbers+=1
+    else:
+        print("Given number:",number," is Odd!")
+        odd_numbers+=1
+
+
+print("Sum of the input numbers is : ",sum)
+print("Total even Numbers : ",even_numbers)
+print("Total odd Numbers : ",odd_numbers)
+print("The largest number entered is : ",largest_number)
+print("The smallest number entered is : ",smallest_number)
+
+
+
+

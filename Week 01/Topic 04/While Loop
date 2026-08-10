@@ -1,0 +1,10 @@
+password="python123"
+count=0
+while count!=3:
+    take_pass=input("Enter the password..")
+    if take_pass==password:
+        print("Access granted!")
+        break
+    else:
+        print("Access denied!")
+        count+=1
