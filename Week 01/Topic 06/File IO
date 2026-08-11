@@ -1,0 +1,7 @@
+with open ("Topic 06/Git.txt","a") as file:
+    file.write("\nThis is another line")
+
+file=open("Topic 06/Git.txt","r")
+print(file.read())
+file.close()
+
