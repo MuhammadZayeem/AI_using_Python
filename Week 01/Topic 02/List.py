@@ -17,3 +17,8 @@ print(Fruits)            #Sorts in order
 #Loop List
 for fruit in Fruits:
    print(fruit)
+
+Numbers=[1,3,2,4,4,3,8,0,9,7,65]
+print(Numbers)
+for number in Numbers:
+   print(number)

@@ -16,3 +16,5 @@ print(my_set2)
 print(my_set.intersection(my_set2))
 print(my_set.difference(my_set2))
 print(my_set.union(my_set2))
+for i in my_set:
+    print(i)
