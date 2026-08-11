@@ -1,0 +1,9 @@
+try:
+    with open ("Topic 07/Missingfile.txt","r") as file1:
+        print(file1.read())
+except FileNotFoundError:
+    print("File not found! We are making a file of this name.")
+    with open("Topic 07/Missingfile.txt","w") as file2:
+        file2.write("This is the file formed instead of the missing file!")
+    with open ("Topic 07/Missingfile.txt","r") as file3:
+            print(file3.read())
