@@ -1,0 +1,16 @@
+class Animal:
+    def __speak(self):
+        return "Some Sound!"
+
+    def get_sound(self):
+        return self.__speak()
+
+class Dog(Animal):
+    def bark(self):
+        return "Dog barks!"
+
+dog=Dog()
+#dog.__speak()
+print(dog.get_sound())
+print(dog.bark())
+
