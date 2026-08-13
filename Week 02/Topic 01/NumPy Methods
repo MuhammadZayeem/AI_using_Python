@@ -1,0 +1,13 @@
+import numpy as np
+arr =np.array([1,2,3])
+print(arr)
+
+print(np.zeros((2,3),float))  #Prints zeros in 2 rows and 3 col
+print(np.ones((2,3),float))   #Prints ones in 2 rows and 3 col
+print(np.full((2,3),55,float))      #Prints 55 in 2 rows and 3 col
+print(np.arange(0,20,3))      #Prints from 0-20 with a gap of 3 , last digit will not be added
+print(np.linspace(1,5,7))     #An array of 7 elements of evenly spaced numbers between a 1 and 5.
+print(np.eye(2))              #Creates an identity matrics of 2*2 with 1 as diagonal
+print(np.diag([1,2,3]))       #Creats a matrics with diagonals values as given in argument array
+print(np.array([1,2,3],dtype=float)) #Changes the type of array
+print((np.array([1.5,2.6,3.9])).astype(int))  #Changes the type of array

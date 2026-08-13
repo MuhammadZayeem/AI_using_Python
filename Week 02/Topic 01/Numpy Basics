@@ -12,13 +12,13 @@ for a in normal_list:
     list_result.append(a+5)
 
 end_time=time.time()
-print("Total time taken for Normal list is : ",end_time-start_time)
+print("Total time taken for Normal list is : ",end_time-start_time) #33.78.......
 
 np_array=np.arange(100000000)
 start_time2=time.time()
 np_result=np_array+5
 end_time2=time.time()
-print("Total time taken for NumPy array is : ",end_time2-start_time2)
+print("Total time taken for NumPy array is : ",end_time2-start_time2) #0.8247....
 
 
 
