@@ -1,0 +1,24 @@
+import numpy as np
+import time
+arr=np.array([[1,2,3],[4,5,6]])
+print(arr.shape)               #Prints rows and columns
+print(arr.ndim)                #Prints the dimension of array
+print(arr.dtype)               #Prints the data-type of array
+
+normal_list=list(range(100000000))
+list_result=[]
+start_time=time.time()
+for a in normal_list:
+    list_result.append(a+5)
+
+end_time=time.time()
+print("Total time taken for Normal list is : ",end_time-start_time)
+
+np_array=np.arange(100000000)
+start_time2=time.time()
+np_result=np_array+5
+end_time2=time.time()
+print("Total time taken for NumPy array is : ",end_time2-start_time2)
+
+
+
