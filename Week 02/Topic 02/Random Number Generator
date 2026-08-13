@@ -1,0 +1,21 @@
+import numpy as np
+
+random_numbers=np.random.default_rng(seed=1)   #Using Seed will give same random numbers everytime
+numbers=random_numbers.integers(1,10,size=10)  #from 1-10 and array of random numbers will be 10
+print(numbers)
+
+random_numbers=np.random.default_rng()   #Without Using Seed will give different random numbers everytime
+numbers=random_numbers.integers(2,20,size=10)  #from 2-20 and array of random numbers will be 10
+print(numbers)
+
+#Stimulate 100K Coin Flip
+
+rng=np.random.default_rng()            #Different numbers everytime
+flips=rng.integers(0,2,size=100000)
+probability_heads=np.mean(flips)
+print("Estimated Probability of heads is : ",probability_heads)
+
+rng=np.random.default_rng(10)            #Same numbers everytime
+flips=rng.integers(0,2,size=100000)
+probability_heads=np.mean(flips)
+print("Estimated Probability of heads is : ",probability_heads)
