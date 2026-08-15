@@ -1,0 +1,11 @@
+import pandas as pd
+s=pd.Series([1,2,2,2,3,3,4,5],index=['a','b','c','d','e','f','g','h'])
+print(s)
+
+print("Valuse : ",s.values)    #Print values Only
+print("Indexes : ",s.index )   #Print indexes only
+print("Data-Type : ",s.dtype)  #Print data Type
+print(s.head)
+print(s.tail)
+print(s.value_counts())        #If pass empty then shows the number of occurings of elements
+print(s.value_counts(True))        #If passed with true then shows the proportions/Percentage of Numbers
