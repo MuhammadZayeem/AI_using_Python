@@ -1,0 +1,12 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'Category': [' Electronics ', 'furniture', 'Home-Appliances', ' electronics', 'FURNITURE ']
+})
+print(df)
+
+df['Category_Clean']=df['Category'].str.strip().str.lower()
+#print(df)
+
+df['Category_Clean']=df['Category_Clean'].str.replace('-',' ')
+print(df)

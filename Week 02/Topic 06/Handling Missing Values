@@ -1,0 +1,22 @@
+import pandas as pd
+df=pd.read_csv(
+    r"D:\4th Semester\Python Learnings\Week 02\Topic 05\retail_sales.csv")
+print(df.isna().sum())
+#isna() gives null values
+#Sum() add values
+
+#Fill Missing with Mode
+df['Quantity']=pd.to_numeric(df['Quantity'])
+df['Quantity']=df['Quantity'].fillna(df['Quantity'].mode()[0])
+
+#Fill Missing wit median
+df['Sales']=df['Sales'].fillna(df['Sales'].median())
+
+#Fill Missing with Mode
+df['Category']=df['Category'].fillna(df['Category'].mode()[0])
+
+#Dropping rows with null values
+df.dropna(subset=['Region'],inplace=True)
+print(df.isna().sum())
+
+
