@@ -8,9 +8,9 @@ data={
 data ["salary"]=[2000,3000,4000,5000]
 
 df=pd.DataFrame(data)
-print(df)
+#print(df)
 average=df["salary"].mean()  #there are also other methods like min,max,median etc
-print(average)
+#print(average)
 
 
 # Loading CSV file
@@ -19,6 +19,11 @@ dff=pd.read_csv(r'D:\4th Semester\Python Learnings\Week 02\Topic 04\retail_sales
 
 #Inspection of DataFrame
 print("Information : ")
-print(df.info())
+#print(dff.info())
+print("\n Shape: ",dff.shape)
+print("\n DataTypes : ",dff.dtypes)
+print("\n statistics: \n",dff.describe)
+
+
 
         
