@@ -1,0 +1,20 @@
+import pandas as pd
+df=pd.read_csv(
+    r"D:\4th Semester\Python Learnings\Week 02\Topic 05\retail_sales.csv",
+    parse_dates=["Date"],
+    dtype={
+        "Category":"category"
+        #"Region" : "region"
+        })
+#df.info()
+
+clean_df=df[df["Sales"]>0]                   #Keeps rows with sales>0
+subset=clean_df[["Date","Category","Sales"]] #From that cleaned keep these
+
+subset.to_excel(r"D:\4th Semester\Python Learnings\Week 02\Topic 05\Subset_sales.xlsx",
+                sheet_name="sales",
+                index=False)           #So index of data frame will not be stored in excel
+subset.to_json(r"D:\4th Semester\Python Learnings\Week 02\Topic 05\Subset_sales.json",
+               orient="records",
+               date_format="iso")
+subset.info()
