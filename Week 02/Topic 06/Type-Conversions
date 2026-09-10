@@ -1,0 +1,11 @@
+import pandas as pd
+df=pd.read_csv(
+    r"D:\4th Semester\Python Learnings\Week 02\Topic 05\retail_sales.csv",
+    parse_dates=["Date"],
+    dtype={
+        "Category":"category"})
+df.info()
+df['Profit']=pd.to_numeric(df['Profit'])
+df['Region']=df['Region'].astype('category')
+df.info()
+print(df['Region'].memory_usage(deep=True))  #For strings/objects it doesnot calculate fully so true helps to check deeply
