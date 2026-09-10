@@ -2,9 +2,23 @@ import pandas as pd
 data={
     'Name':['Ali','hassan','Ayan','Ahmad'],
     'Age':[21,22,23,21],
-    'City':['Lahore','Islamabad','Karachi','Quetta'],
+   'City':['Lahore','Islamabad','Karachi','Quetta'],
     'Grades':['A','C','B','D']
 }
+data ["salary"]=[2000,3000,4000,5000]
 
 df=pd.DataFrame(data)
 print(df)
+average=df["salary"].mean()  #there are also other methods like min,max,median etc
+print(average)
+
+
+# Loading CSV file
+dff=pd.read_csv(r'D:\4th Semester\Python Learnings\Week 02\Topic 04\retail_sales.csv')
+
+
+#Inspection of DataFrame
+print("Information : ")
+print(df.info())
+
+        
