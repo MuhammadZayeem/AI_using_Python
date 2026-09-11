@@ -4,6 +4,10 @@ df=pd.read_csv(
 print(df)
 
 df_sorted=df.sort_values(by=['Quantity','Sales'],
-                        ascending=[False,True])
-#df_sorted.head()
+                        ascending=[False,True])   #False=Descending, True=Ascending
+df_sorted.head()   #Gives first 5 rows 
 print(df_sorted)
+
+# Rank Sales within Quantity groups
+df['Sales_rank'] = df.groupby('Quantity')['Sales'].rank(method='dense', ascending=False)
+print("\nSales Rank within Quantity groups:\n", df)
