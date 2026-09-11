@@ -1,0 +1,24 @@
+import pandas as pd
+
+customers = pd.DataFrame({
+    'CustomerID': [1, 2, 3],
+    'Name': ['Alice', 'Bob', 'Charlie']
+})
+
+orders = pd.DataFrame({
+    'OrderID': [101, 102, 103, 104],
+    'CustomerID': [1, 2, 2, 3],
+    'Amount': [250, 150, 200, 300]
+})
+
+# Inner merge on CustomerID
+df_inner = pd.merge(customers, orders, on='CustomerID', how='inner')
+print("\nInner Merge:\n", df_inner)
+
+# Left merge
+df_left = pd.merge(customers, orders, on='CustomerID', how='left')
+print("\nLeft Merge:\n", df_left)
+
+# Concatenate rows example
+df_concat = pd.concat([customers, customers])
+print("\nConcatenated Rows:\n", df_concat)
