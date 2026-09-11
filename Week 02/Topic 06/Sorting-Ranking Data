@@ -1,0 +1,9 @@
+import pandas as pd
+df=pd.read_csv(
+    r"D:\4th Semester\Python Learnings\Week 02\Topic 05\retail_sales.csv")
+print(df)
+
+df_sorted=df.sort_values(by=['Quantity','Sales'],
+                        ascending=[False,True])
+#df_sorted.head()
+print(df_sorted)
