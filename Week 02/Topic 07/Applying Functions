@@ -1,0 +1,41 @@
+import pandas as pd
+df=pd.read_csv(
+    r"D:\4th Semester\Python Learnings\Week 02\Topic 07\ecommerce_sales_analytics_5000.csv"
+)
+#print(df.info())
+df['payment_type']=df['payment_method'].map({
+    "Card":"Digital",
+    "Wallet":"Digital",
+    "COD":"Cash"
+})
+#print(df['payment_type'].unique())
+#print(df[["payment_method","payment_type"]].head())
+#print(df.groupby("payment_type").size())
+
+
+def revenue_category(row):
+    if row["revenue"]>500:
+        return "High"
+    elif row["revenue"]>=200:
+        return "Medium"
+    else:
+        return "Low"
+
+df["revenue_category"]=df.apply(revenue_category,axis=1)
+#print(df["revenue_category"].value_counts())
+#print(df[["revenue","revenue_category"]].sample(10))
+
+
+
+def add_profit(data):
+    data["profit"]=data["revenue"]*0.20
+    return data
+
+def add_net_revenue(data):
+    data["net_revenue"]=data["revenue"]-data["profit"]
+    return data
+
+df=(df
+    .pipe(add_profit)
+    .pipe(add_net_revenue))
+print(df)
